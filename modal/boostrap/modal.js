@@ -1,0 +1,6 @@
+class BoostrapModal{
+	constructor()
+	{
+
+	}
+}
