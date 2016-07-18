@@ -1,0 +1,67 @@
+//************** filtro gallito **************//
+script(src="../../../../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js")
+link(href="../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css" type="text/css" rel="stylesheet")
+link(href="../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.skinNice.css" type="text/css" rel="stylesheet")
+- rutaImagenes ='../../../imagenes'
+div(class="contenedor-filtro-gallito")
+    div(class="filtro-gallito-title")
+        div(class="contenedor-title-gallito-filter")
+            span(class="filtro-gallito-title-text") Filtros Seleccionados
+            i(class="fa fa-angle-down fliter-arrow-down desplegarFiltro" aria-hidden="true")
+        div(class="cont-filter-gallito cont-filter-gallito-movile")
+            div(class="filtro-gallito-content-1")
+                div(class="filtro-gallito-burbuja") 
+                    span Empresa: El País
+                    i(class="fa fa-times icon-close" aria-hidden="true")
+                div(class="filtro-gallito-burbuja") 
+                    span Área: Servicios - Oficios
+                    i(class="fa fa-times icon-close" aria-hidden="true")
+            div(class="filtro-gallito-title")
+                div(class="contenedor-title-gallito-filter")
+                    span(class="filtro-gallito-title-text") Buscar por palabra clave
+                    i(class="fa fa-angle-down fliter-arrow-down" aria-hidden="true")
+                div(class="cont-filter-gallito")
+                    input(class="input-filter" placeholder="Ejemplo: Administrador")
+            div(class="filtro-gallito-title")
+                div(class="contenedor-title-gallito-filter")
+                    span(class="filtro-gallito-title-text") Fecha
+                    i(class="fa fa-angle-down fliter-arrow-down" aria-hidden="true")
+                div(class="cont-filter-gallito")
+                    div(class="cont-filter-text-number")
+                        span(class="cont-filter-text") Hoy
+                        a(class="cont-filter-number" href="#") (4)
+                    div(class="cont-filter-text-number")
+                        span(class="cont-filter-text") Hace 2 días
+                        a(class="cont-filter-number" href="#") (48)
+                    div(class="cont-filter-text-number")
+                        span(class="cont-filter-text") Última semana
+                        a(class="cont-filter-number" href="#") (305)
+                    div(class="cont-filter-text-number")
+                        span(class="cont-filter-text") Últimos 15 días
+                        a(class="cont-filter-number" href="#") (617)
+                    div(class="cont-filter-text-number")
+                        span(class="cont-filter-text") Todos los avisos
+                        a(class="cont-filter-number" href="#") (1331)
+            div(class="filtro-gallito-title")
+                div(class="contenedor-title-gallito-filter")
+                    span(class="filtro-gallito-title-text") Nivel
+                    i(class="fa fa-angle-down fliter-arrow-down" aria-hidden="true")
+                div(class="cont-filter-gallito")
+                    div(class="cont-filter-text-number")
+                        span(class="cont-filter-text") Auxiliar
+                        a(class="cont-filter-number" href="#") (360)
+                    div(class="cont-filter-text-number")
+                        span(class="cont-filter-text") Técnico especialista
+                        a(class="cont-filter-number" href="#") (48)
+                    div(class="cont-filter-text-number")
+                        span(class="cont-filter-text") Ejecutivo comercial
+                        a(class="cont-filter-number" href="#") (158)
+                    div(class="cont-filter-text-number")
+                        a(class="cont-filter-text link-filter-nivel" href="#") Ver todos
+            div(class="filtro-gallito-title")
+                div(class="contenedor-title-gallito-filter")
+                    span(class="filtro-gallito-title-text") Remuneración
+                    i(class="fa fa-angle-down fliter-arrow-down" aria-hidden="true")
+                div(class="cont-filter-gallito")    
+                    input(input id="range_03"  readonly="")    
+//************** filtro gallito **************//

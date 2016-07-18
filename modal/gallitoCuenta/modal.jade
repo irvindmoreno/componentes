@@ -1,0 +1,46 @@
+//************** modal gallitoCuenta **************//
+- rutaImagenes ='../../../imagenes'
+button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#modalGallitoCuenta')
+      | abrir modal
+    #modalGallitoCuenta.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+      .modal-dialog-gallitoCuenta.modal-dialog(role='document')
+        .modal-content
+          .modal-header.header-modal-gallitoCuenta
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            div(class="relative header-modal-gallitoCuenta")
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                div(class="gallito-icon")
+                    a(href="#")
+                        span(class="gallito-icon-title") gallito
+                        span(class="gallito-icon-com") .com
+                    div(class="gallito-icon-title-sub") Postulante
+                div(class="gallito-register-container")
+                    div(class="gallito-register-botton inline-block-middle")
+                        input(type="button" value="Soy una empresa")                    
+          .modal-body.modal-body-gallitoCuenta
+            div(class="title-text-modal-gallitoCuenta") Accede a tu cuenta
+            div(class="cont-title-short-gallitoCuenta") 
+                span(class="title-short-gallitoCuenta-gray") Inicia sesión con tu cuenta 
+                a(href="#" class="title-short-gallitoCuenta-color") gallito.com
+            form( action="" method="post" id="register-form" novalidate="novalidate")
+              .form-group
+                label(for='exampleInputEmail1') Correo Electrónico
+                input#exampleInputEmail1.form-control(type='email', placeholder='Email' name="txtRazonSocial")
+              .form-group
+                label(for='exampleInputPassword1') Contraseña
+                input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+                div(class="relative-recordarme")
+                    a(href="#" class="text-celeste-gallitoCuenta title-short-gallitoCuenta-color block-olvide-contra")¿Olvidé mi contraseña?
+                    span(class="contenedor-recordarme")
+                        input(type="checkbox" id="recordarme")
+                        label(for="recordarme" id="label-recordarme") Recordarme
+                div(class="cont-btn-ingresar-gallitoCuenta")
+                    button.btn-ingresar-gallitoCuenta.btn.btn-default(type='submit') Ingresar
+                div(class="cont-text-2-gallitoCuenta")
+                    span() ¿No está registrado?
+                    a(href="#" class="title-short-gallitoCuenta-color")  Regístrese ahora
+                button( class="btn-facebook-gallitoCuenta")
+                    i(class="icon-face-modal-gallitoCuenta fa fa-facebook" aria-hidden="true")
+                    span(class="vam") Ingresar con Facebook
+//************** modal gallitoCuenta **************//
