@@ -1,14 +1,14 @@
-/************** header todobusco **************/
 @font-face {
   font-family: "scfly";
-  src: url("../../../fonts/scfly/scfly.eot") format("embedded-opentype"), url("../../../fonts/scfly/scfly.woff") format("woff"), url("../../../fonts/scfly/scfly.ttf") format("truetype");
+  src: url("../../fonts/scfly/scfly.eot") format("embedded-opentype"), url("../../fonts/scfly/scfly.woff") format("woff"), url("../../fonts/scfly/scfly.ttf") format("truetype");
 }
 @-moz-keyframes animationButton {
   0% {
     background: #fff;
   }
   50% {
-    background: #ffa200;
+    background: #bbdefb;
+    color: #1976d2;
   }
   100% {
     background: #fff;
@@ -19,7 +19,8 @@
     background: #fff;
   }
   50% {
-    background: #ffa200;
+    background: #bbdefb;
+    color: #1976d2;
   }
   100% {
     background: #fff;
@@ -30,18 +31,60 @@
     background: #fff;
   }
   50% {
-    background: #ffa200;
+    background: #bbdefb;
+    color: #1976d2;
   }
   100% {
     background: #fff;
   }
 }
 header {
-  background: #007f4c;
+  background: #1976d2;
   height: 5em;
+}
+.componentes {
+  background: #2196f3;
+}
+.componentes-title {
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  font-size: 2em;
+  color: #fff;
+}
+.componentes-links {
+  padding: 1em;
+}
+.componenteClassLink {
+  color: #fff;
+  font-size: 1.3em;
+  display: inline-block;
+  border-right: 2px solid #ffa200;
+  padding: 0em 0.5em;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.link-componente-iframe {
+  color: #fff;
+  background: #ffa200;
+  padding: 0.2em 1em;
+  border-radius: 6px;
+  margin-right: 1em;
+  margin-top: 1em;
+  display: inline-block;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.link-componente-iframe:hover {
+  color: #1976d2;
 }
 #header-todobusco {
   font-family: scfly;
+}
+#idIframe {
+  width: 100%;
+  height: 20em;
+  border: none;
 }
 a:hover {
   text-decoration: none;
@@ -70,14 +113,16 @@ a:hover {
 }
 .todobusco-icon-title {
   color: #fff;
-  margin-right: 0.2em;
+}
+.todobusco-icon-title-2 {
+  color: #ffa200;
 }
 .todobusco-icon-com {
   color: #fff;
 }
 .todobusco-register-botton input {
   background: #fff;
-  color: #007f4c;
+  color: #ffa200;
   border: #ffdead;
   outline: none;
   -webkit-appearance: none;
@@ -156,13 +201,13 @@ a:hover {
     border-right: none;
   }
 }
-/************** header todobusco **************/
 @-moz-keyframes animationButton {
   0% {
     background: #fff;
   }
   50% {
-    background: #ffa200;
+    background: #bbdefb;
+    color: #1976d2;
   }
   100% {
     background: #fff;
@@ -173,7 +218,8 @@ a:hover {
     background: #fff;
   }
   50% {
-    background: #ffa200;
+    background: #bbdefb;
+    color: #1976d2;
   }
   100% {
     background: #fff;
@@ -184,7 +230,8 @@ a:hover {
     background: #fff;
   }
   50% {
-    background: #ffa200;
+    background: #bbdefb;
+    color: #1976d2;
   }
   100% {
     background: #fff;
@@ -195,7 +242,8 @@ a:hover {
     background: #fff;
   }
   50% {
-    background: #ffa200;
+    background: #bbdefb;
+    color: #1976d2;
   }
   100% {
     background: #fff;
