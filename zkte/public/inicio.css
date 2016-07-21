@@ -63,6 +63,7 @@ header {
   padding: 0em 0.5em;
   border-radius: 2px;
   cursor: pointer;
+  transition: all ease 0.3s;
 }
 .link-componente-iframe {
   color: #fff;
@@ -200,6 +201,33 @@ a:hover {
   .sbmobile {
     border-right: none;
   }
+}
+.componenteSeleccionado {
+  color: #ffa200;
+  text-decoration: underline;
+  font-style: italic;
+}
+.text-view {
+  font-size: 1.5em;
+  color: #ff5722;
+  display: inline-block;
+}
+.nombreComponenteSeleccionado {
+  background: #1976d2;
+  color: #bbdefb;
+}
+.nombreComponenteSeleccionado:hover {
+  color: #fff;
+}
+.text-preview {
+  padding: 0.5em 1em;
+}
+.text-gray {
+  color: #565656;
+}
+.text-view-color {
+  margin-left: 0.5em;
+  font-size: 1.2em;
 }
 @-moz-keyframes animationButton {
   0% {

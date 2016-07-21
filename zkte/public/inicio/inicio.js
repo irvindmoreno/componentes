@@ -1,61 +1,170 @@
 "use strict";
 
 $(document).on("ready", inicio);
+var componentes = {};
+var banderaPrimerClick = 0;
 function inicio() {
-    linksDefault();
-    $("#Header").on("click", nostrarHeaderComponentes);
-    $("#Footer").on("click", nostrarFooterComponentes);
+    actualizarJsonComponente("header");
+    pintarComponenteSeleccionado("header");
+    $(".componenteClassLink").on("click", pintarComponenteSeleccionadoClick);
+    $(".link-componente-iframe").on("click", pintarNombreComponente);
+}
+function pintarNombreComponente() {
+    $(".link-componente-iframe").removeClass("nombreComponenteSeleccionado");
+    $(this).addClass("nombreComponenteSeleccionado");
+}
+function pintarComponenteSeleccionadoClick() {
+    $(".componenteClassLink").removeClass("componenteSeleccionado");
+    $(this).addClass("componenteSeleccionado");
+}
+function pintarComponenteSeleccionado(componente) {
+    $("#" + componente).addClass("componenteSeleccionado");
+}
+function actualizarJsonComponente(componente) {
+    switch (componente) {
+        case "header":
+            componentes = {
+                header: ["gallito", "todobusco", "asep", "clickslogic", "ePass", "zkte"]
+            };
+            mostrarComponentes();
+            break;
+        case "footer":
+            componentes = {
+                footer: ["gallito", "todobusco", "asep"]
+            };
+            mostrarComponentes();
+            break;
+        case "banner":
+            componentes = {
+                banner: ["todobusco"]
+            };
+            mostrarComponentes();
+            break;
+        case "button":
+            componentes = {
+                button: ["asepAzul"]
+            };
+            mostrarComponentes();
+            break;
+        case "contadores":
+            componentes = {
+                contadores: ["gallito"]
+            };
+            mostrarComponentes();
+            break;
+        case "formulario":
+            componentes = {
+                formulario: ["ePass", "reclamacionesEpass"]
+            };
+            mostrarComponentes();
+            break;
+        case "gota":
+            componentes = {
+                gota: ["ePass"]
+            };
+            mostrarComponentes();
+            break;
+        case "grafico":
+            componentes = {
+                grafico: ["cliclogix"]
+            };
+            mostrarComponentes();
+            break;
+        case "icons":
+            componentes = {
+                icons: ["gallito", "todobusco"]
+            };
+            mostrarComponentes();
+            break;
+        case "input":
+            componentes = {
+                input: ["asep", "fileAsep", "textAsep"]
+            };
+            mostrarComponentes();
+            break;
+        case "inscripcion":
+            componentes = {
+                inscripcion: ["asep"]
+            };
+            mostrarComponentes();
+            break;
+        case "menu":
+            componentes = {
+                menu: ["clickslogic"]
+            };
+            mostrarComponentes();
+            break;
+        case "modal":
+            componentes = {
+                modal: [""]
+            };
+            mostrarComponentes();
+            break;
+        case "navegacion":
+            componentes = {
+                navegacion: ["asep"]
+            };
+            mostrarComponentes();
+            break;
+        case "paquete":
+            componentes = {
+                paquete: ["ePass", "ePassMas"]
+            };
+            mostrarComponentes();
+            break;
+        case "posit":
+            componentes = {
+                posit: ["ePass", "scorecard"]
+            };
+            mostrarComponentes();
+            break;
+        case "post":
+            componentes = {
+                post: ["gallito", "gallitoB"]
+            };
+            mostrarComponentes();
+            break;
+        case "publicidad":
+            componentes = {
+                publicidad: ["ePass", "epassFlecha"]
+            };
+            mostrarComponentes();
+            break;
+        case "redesSociales":
+            componentes = {
+                redesSociales: ["asep"]
+            };
+            mostrarComponentes();
+            break;
+
+    }
+}
+function mostrarComponentes() {
+    limpiarContenedorComponentes();
+    for (var key in componentes) {
+        var componente = key;
+        console.log(componente);
+        for (var i in componentes[key]) {
+            var nombreComponente = componentes[key][i];
+            var link = "../../public/" + componente + "/" + nombreComponente + "/" + componente + ".html";
+            $("#componentes-links-header-content").append("<span onclick=actualizarIframe('" + link + "','" + componente + "','" + nombreComponente + "') class='link-componente-iframe' href='" + link + "' >" + componente + " - " + nombreComponente + "</span>");
+        }
+    }
+    if (banderaPrimerClick == 0) {
+        $("#componentes-links-header-content span:first-child").trigger("click");
+        $("#componentes-links-header-content span:first-child").addClass("nombreComponenteSeleccionado");
+    }
+    banderaPrimerClick = 1;
 }
 function limpiarContenedorComponentes() {
     $("#componentes-links-header-content").html("");
 }
-function actualizarIframe(link) {
+function actualizarIframe(link, componente, nombreComponente) {
     $("#idIframe").attr("src", link);
+    mostrarTextoPreview(componente, nombreComponente);
 }
-function nostrarFooterComponentes() {
-    limpiarContenedorComponentes();
-    var componentes = {
-        footer: ["gallito", "todobusco"]
-    };
-    for (var key in componentes) {
-        var componente = key;
-        console.log(componente);
-        for (var i in componentes[key]) {
-            var nombreComponente = componentes[key][i];
-            console.log(nombreComponente);
-            var link = "../../public/" + componente + "/" + nombreComponente + "/" + componente + ".html";
-            $("#componentes-links-header-content").append("<span onclick=actualizarIframe('" + link + "') class='link-componente-iframe' href='../../public/" + componente + "/" + nombreComponente + "/" + componente + ".html' >" + componente + " - " + nombreComponente + "</span>");
-        }
-    }
-}
-function nostrarHeaderComponentes() {
-    limpiarContenedorComponentes();
-    var componentes = {
-        header: ["gallito", "todobusco"]
-    };
-    for (var key in componentes) {
-        var componente = key;
-        console.log(componente);
-        for (var i in componentes[key]) {
-            var nombreComponente = componentes[key][i];
-            console.log(nombreComponente);
-            var link = "../../public/" + componente + "/" + nombreComponente + "/" + componente + ".html";
-            $("#componentes-links-header-content").append("<span onclick=actualizarIframe('" + link + "') class='link-componente-iframe' href='../../public/" + componente + "/" + nombreComponente + "/" + componente + ".html' >" + componente + " - " + nombreComponente + "</span>");
-        }
-    }
-}
-function linksDefault() {
-    var componentes = {
-        header: ["gallito", "todobusco"],
-        footer: ["gallito", "todobusco"]
-    };
-    for (var key in componentes) {
-        var componente = key;
-        console.log(componente);
-        for (var i in componentes[key]) {
-            var nombreComponente = componentes[key][i];
-            console.log(nombreComponente);
-            $("#componentes-links-header-content").append("<span onclick='' class='link-componente-iframe' href='../../public/" + componente + "/" + nombreComponente + "/" + componente + ".html' >" + componente + " - " + nombreComponente + "</span>");
-        }
-    }
+function mostrarTextoPreview(componente, nombreComponente) {
+    // mostramos el texto previuw y el comando de instalación
+    $(".text-view-color").html(componente + " - " + nombreComponente);
+    $(".comando-de-instalacion").html(" (comp.use " + componente + " " + nombreComponente + ")");
 }

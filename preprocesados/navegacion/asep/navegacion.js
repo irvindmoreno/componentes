@@ -19,3 +19,4 @@ class NavegacionAsep{
 	}
 
 }
+var obj = new NavegacionAsep();

@@ -1,9 +1,10 @@
 - rutaImagenes ='../../../imagenes'
 extends ./layout/layout.jade
 block content
+    - componentes = ["header","footer","banner","button","contadores","formulario","gota","grafico","icons","input","inscripcion","menu","navegacion","paquete","posit","post","publicidad","redesSociales"]
     header(class="relative" id="header-todobusco")
         div(class="todobusco-icon")
-            a(href="#")
+            a(href="/")
                 span(class="todobusco-icon-title") Zkte-
                 span(class="todobusco-icon-title-2") Front
         div(class="todobusco-register-container")       
@@ -19,9 +20,14 @@ block content
         div(class="componentes-links")
             div(class="componentes-links-header")
                 div(class="componentes-links-header-tile")
-                    - componentes = ["Header","Footer"]
                     each componente in componentes
-                        span(class="componenteClassLink" id=componente)=componente
+                        span(class="componenteClassLink" onclick="actualizarJsonComponente('"+componente+"')" id=componente )=componente
                 div(id="componentes-links-header-content")
+    div(class="text-preview")
+        span(class="text-view") Vista previa de:
+        span(class="text-view-color text-gray")
+        div
+            span(class="texto-instalacion text-gray") comando:
+            span(class="comando-de-instalacion text-gray")
     div(class="contenedor-iframe")
         iframe(id="idIframe" src="#")
