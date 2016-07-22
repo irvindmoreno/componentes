@@ -1570,13 +1570,11 @@ class SliderDgalli{
 
 	}
 }
-<<<<<<< HEAD:componentes/slider/dgalli/slider.js
 $(document).on("ready",inicio)
 function inicio()
 {
 	var obj = new SliderDgalli();
 }
-=======
 class ContadoresGallito{
 	constructor()
 	{
@@ -1589,4 +1587,3 @@ class PostGallito{
 
 	}
 }
->>>>>>> 852cce80356dff8a1348247b67b9172778940fbd:proyecto/gallito/inicio/clases.js

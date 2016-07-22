@@ -139,6 +139,42 @@ function actualizarJsonComponente(componente)
             }
             mostrarComponentes()
             break;
+        case "select":
+            componentes={
+                select:["asep"]
+            }
+            mostrarComponentes()
+            break;
+        case "slider":
+            componentes={
+                slider:["gallito","todobusco","gallitoB","dgalli","ePass","touch","boostrap"]
+            }
+            mostrarComponentes()
+            break;
+        case "tabs":
+            componentes={
+                tabs:["asep"]
+            }
+            mostrarComponentes()
+            break;
+        case "titulo":
+            componentes={
+                titulo:["asep"]
+            }
+            mostrarComponentes()
+            break;
+        case "vinietas":
+            componentes={
+                vinietas:["asep","clickslogic"]
+            }
+            mostrarComponentes()
+            break;
+        case "nuevo":
+            componentes={
+                nuevo:["componente"]
+            }
+            mostrarComponentes()
+            break;
             
     }
 }
@@ -177,5 +213,5 @@ function mostrarTextoPreview(componente,nombreComponente)
 {
     // mostramos el texto previuw y el comando de instalación
     $(".text-view-color").html(componente+" - "+nombreComponente)
-    $(".comando-de-instalacion").html(" (comp.use "+componente+" "+nombreComponente+")")
+    $(".comando-de-instalacion").html(" (comp.import "+componente+" "+nombreComponente+")")
 }

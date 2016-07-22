@@ -104,4 +104,4 @@ class TabsAsep{
 		this.colorContenidoPestaniaDesactivada=background;
 	}
 }
-//var tabsAsep= new TabsAsep()
+var tabsAsep= new TabsAsep()
